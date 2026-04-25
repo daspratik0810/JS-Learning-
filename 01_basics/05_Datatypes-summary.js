@@ -29,3 +29,34 @@ let myObj = {
 const myFunction = function() {
     console.log("Hello, I am a function");
 }
+
+// ++++++++++++++++++++++++++++++++++++++++
+
+// Memory types :-  Stack (Primitive datatypes),  Heap  (Non - Primitive datatypes)
+//  Stack :-
+let myYoutubeName = "pratikdotcom"  //primitive datatype
+
+let anotherName = myYoutubeName    //primitive datatype with a copy of my myYoutubeName
+anotherName = "hritikdotcom"
+
+console.log(myYoutubeName);       // it will be same pratikdotcom as the original value does not change
+console.log(anotherName);      //it will will be hritikdotcom 
+
+//  Heap :-
+
+let userOne = {                    //userOne is an obj, ie non-primitive
+    email: "user1@google.com",     // here userOne points to a reference of an obj stored in heap memory
+    upi: "user@sbi"
+}
+
+let userTwo = userOne              // here userTwo points to a reference of an obj stored in heap memory
+
+userTwo.email = "user2@google.com"  //any changes made, will be reflected in the original value of the main obj
+
+console.log(userOne.email);         //hence new email-value will come here 
+console.log(userTwo.email);         //hence new email-value will come here
+
+
+
+
+

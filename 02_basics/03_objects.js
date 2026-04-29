@@ -1,8 +1,11 @@
-// There are two methods to declare an Object 
- // 1) Constructor/Singleton :- the objs that are made with constructor
- Object.create
- // 2) Literals :- the objs that are made with literals
+// There are two methods to declare an Object:- 
+ 
+// 1) Constructor/Singleton :- the objs that are made with constructor
+ //Object.create
 
+ // 2) Literals :- the objs that are made with literals
+ //const obj = {}
+ 
  const mySym = Symbol("key1");
 
  const JsUser = {       //this is an object having multiple datatypes

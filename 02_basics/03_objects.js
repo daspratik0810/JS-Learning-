@@ -1,3 +1,4 @@
+// STUDY OBJS VERY PROPERLY AS IT IS VERY IMPORtANT IN APIs
 // There are two methods to declare an Object:- 
  
 // 1) Constructor/Singleton :- the objs that are made with constructor

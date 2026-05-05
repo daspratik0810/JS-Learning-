@@ -1,0 +1,7 @@
+//Difference Between NodeList and HTMLCollection
+NodeList	                       HTMLCollection
+Can contain any node	           Contains only HTML elements
+Returned by querySelectorAll()	   Returned by getElementsByClassName()
+Supports forEach()	               Usually does not support forEach(). so we convert it to array, using Array.from(ABC), then that can be used as array and later properties like forEach
+Can be static or live	           Usually live
+

@@ -1,0 +1,31 @@
+//A NodeList is a collection of nodes returned by DOM methods.
+//It looks similar to an array but is not a real array.
+//Commonly returned by: document.querySelectorAll()  and childNodes
+
+//Creating a NodeList
+const items = document.querySelectorAll(".item");  //It Selects all elements with class item and returns a NodeList 
+
+//Accessing Elements in NodeList
+console.log(items[0]);
+console.log(items[1]);
+
+//Length of NodeList
+console.log(items.length);
+
+//Looping Through NodeList Using forEach()
+items.forEach(function(item) {
+    console.log(item);
+});
+
+//Changing Elements Using NodeList
+items.forEach(function(item) {
+    item.style.color = "blue";
+});
+
+//Adding Events to Multiple Elements
+items.forEach(function(item) {
+    item.addEventListener("click", function() {
+        console.log("Item clicked");
+    });
+});
+

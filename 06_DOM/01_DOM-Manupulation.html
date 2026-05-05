@@ -1,0 +1,52 @@
+//DOM stands for Document Object Model.
+//It represents the HTML document as a tree structure.
+//JavaScript uses the DOM to:  Access HTML elements, Change content, Modify styles, Handle events dynamically
+
+
+//Accessing Elements in DOM
+
+// Select by ID
+document.getElementById("idName");
+
+// Select by class
+document.getElementsByClassName("className");
+
+// Select by tag
+document.getElementsByTagName("p");
+
+// Query selector (first matching element)
+document.querySelector(".className");
+
+// Query selector all
+document.querySelectorAll("p");
+
+//Changing Content
+element.innerHTML = "Hello";    //it is the content that is visible in HTML page
+element.textContent = "Welcome";    //it is the exact content that might be also hidden
+
+//Changing Styles
+element.style.color = "red";
+element.style.backgroundColor = "yellow";
+element.style.fontSize = "20px";
+
+//Changing Attributes
+element.setAttribute("class", "newClass");
+
+element.getAttribute("href");
+
+element.removeAttribute("disabled");
+//****************************************************************************************************
+//Creating and Adding Elements
+const newDiv = document.createElement("div");
+
+newDiv.textContent = "New Element";
+
+document.body.appendChild(newDiv);
+
+//Removing Elements
+element.remove();
+
+//Event Handling
+button.addEventListener("click", function() {
+    console.log("Button clicked");
+});

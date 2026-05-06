@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement("li")
+        li.innerHTML = `${langName}`
+        document.querySelector(".language").appendChild(li)  //appendChild()it is a method that adds additional elements to the end of the selected parent element
+    }
+    addLanguage("Java")     // it is not too much optimised, as entire DOM tree is traversed at every funciton call 
+    addLanguage("python")
+
+    function addOptiLanguage(langName){
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+    }
+    addOptiLanguage("goLang")
+
+    //EDIT
+    const secondLang = document.querySelector("li:nth-child(2)")  //it will select java
+    //secondLang.innerHTML = "Mojo"  //we can directly change the innerHTML, but it is not optimised
+    
+    const newLi = document.createElement("li")      //so for optimised code, we will create a new li
+    newLi.textContent = "Mojo"                      //this new li will have Mojo as textcontent
+    secondLang.replaceWith(newLi)                   // then this new li will be replaced by java
+
+    //edit  - SECOND APPROACH
+    const firstLang = document.querySelector("li:first-child")   //this will select Javascript
+    firstLang.outerHTML = '<li>TypeScript</li>'             //and simply change the outerHTML to TypeScript
+
+    //remove
+    const lastLang = document.querySelector('li:last-child')        //this will select the last child,ie,golang
+    lastLang.remove()                                               //and will remove it
+</script>
+</html>

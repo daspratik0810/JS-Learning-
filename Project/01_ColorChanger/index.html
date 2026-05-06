@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-Changer</title>
+</head>
+<body>
+    <h1>Color Scheme Switcher</h1>
+    <button class="buttons" id = "Red">Red</button>
+    <button class="buttons" id = "Blue">Blue</button>
+    <button class="buttons" id = "Grey">Grey</button>
+    <button class="buttons" id = "Orange">Orange</button>
+    <button class="buttons" id = "Purple">Purple</button>
+    <hr>
+    <h2>Try clicking on one of the colors</h2>
+
+    Text bg color: <input type="text" id="bgcolor" onkeyup="changeBGColor(this.value)">
+    <hr>
+    Text color <input type="color" onchange="changeBGColor(this.value)">
+    <hr>
+    Text Size: <input type="range" min="0" max="100" value="10" onmousemove="changeHeaderSize(this.value)">
+    <hr>
+    Text Padding :- <input type="number" onkeyup="changePadding(this.value)">
+
+    
+    
+<script src = "code.js"></script>
+</body>
+</html>

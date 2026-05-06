@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);   //it will return the HTML Collections, which is similar to arrays.
+    // console.log(parent.children[1].innerHTML);  //it will give the index 1 value for the parent.children
+
+    // for (let i = 0; i < parent.children.length; i++) {       //as HTML collection is similar to array then, for loop can be used
+    //      console.log(parent.children[i].innerHTML);
+        
+    // }
+    parent.children[1].style.color = "orange"
+    // console.log(parent.firstElementChild);   //will reutrn the first child
+    // console.log(parent.lastElementChild);    //will reutrn the first child
+
+    const dayOne = document.querySelector('.day')  //will give the first day,ie,monday. As it is query selector and not query selector all(this will return all the element with day class)
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);       // will give the entire parent element
+    // console.log(dayOne.nextElementSibling);  //will give the next sibling, ie, here tuesday
+
+    console.log("NODES: ", parent.childNodes);  //will give the number of child nodes (child elements + whitespaces/enter)
+</script>
+</html>

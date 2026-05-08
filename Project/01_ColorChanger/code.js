@@ -21,24 +21,19 @@ buttons.forEach( function(butt) {
         console.log(event);
         console.log(event.target);
 
-        if(event.target.id === "Red"){
-            console.log("Clicked Red");
+        if(event.target.id === "Red"){   
             bd.style.backgroundColor = event.target.id
         }
         if(event.target.id === "Blue"){
-            console.log("Clicked BLue");
             bd.style.backgroundColor = event.target.id
         }
         if(event.target.id === "Grey"){
-            console.log("Clicked Grey");
             bd.style.backgroundColor = event.target.id
         }
         if(event.target.id === "Orange"){
-            console.log("Clicked Orange");
             bd.style.backgroundColor = event.target.id
         }
         if(event.target.id === "Purple"){
-            console.log("Clicked Purple");
             bd.style.backgroundColor = event.target.id
         }
 

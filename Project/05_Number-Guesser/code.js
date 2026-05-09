@@ -57,6 +57,44 @@ function checkGuess(guess){ //if userinput = random number  or not
     }
 }
 
+function displayGuess(guess){   //clean the guess, update remaininggues, add previous guess to the array 
+    userInput.value=""
+    guessSlot.innerHTML+= `${guess},  `
+    numberOfGuesses++
+    remainingAttempts.innerHTML = `${11-numberOfGuesses}`
+}
+
+function displayMessage(message){   //display if the user won, num is high, num is low
+lowOrHi.innerHTML = `<h2>${message}</h2>`
+}
+
+function endGame(){
+    userInput.value = ""
+    userInput.setAttribute("DISABLED","")
+    para.classList.add("button")
+    para.innerHTML = `<h2 id="newGame">Start New Game </h2>`
+    startOver.appendChild(para)
+    playGame = false
+    newGame()
+}
+
+function newGame(){
+    const newGameButton = document.querySelector("#newGame")
+    newGameButton.addEventListener("click", function(even){
+        randomNumber = parseInt(Math.random()*100+1)
+        prevGuess = []
+        numberOfGuesses  = 1
+        guessSlot.innerHTML = ""
+        remainingAttempts.innerHTML = `${11-numberOfGuesses}`
+        userInput.removeAttribute("DISABLED")
+        startOver.removeChild(para)
+        lowOrHi.innerHTML=""
+
+        playGame = true
+
+    })
+}
+
 
 
 

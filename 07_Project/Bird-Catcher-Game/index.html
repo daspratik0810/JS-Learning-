@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .game{
+            position: relative;
+            height: 500px;
+            width: 700px;
+            margin: auto;
+            border: 5px solid black;
+            background-image: url("https://images3.alphacoders.com/131/1311979.jpg");
+            background-size: 150%;
+            background-repeat: no-repeat;
+            animation: moveBG 5s infinite linear;
+        }
+        @keyframes moveBG{
+             0%,100%{background-position: -200px 0px ;}
+             50%{background-position: 0px 0px;}
+        }
+        .bird img{
+            position: absolute;
+            height: 150px;
+            right: 10px;
+            top: 100px;
+            transition: 2s;
+            transform: rotateY(180deg);
+            animation: birdMove 5s infinite linear;
+            box-shadow: 100px 200px 100px #0005;
+            mix-blend-mode: darken;
+
+        }
+        @keyframes birdMove {
+            0%,100%{right:0px}
+            50%{right:500px;transform: rotateY(180deg)}
+            51%{transform: rotateY(0);}
+            99%{transform: rotateY(0);}
+        }
+        .bird img:hover{
+            transition: 2s ;
+            top: 200px;
+        }
+        #egg{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="game" height="">
+        <div class="bird">
+            <img src="https://media.tenor.com/dlMu85vsho4AAAAM/alfa7.gif" alt="bird">
+        </div>
+
+        <img id="egg" src="/07_Project/Bird-Catcher-Game/image-removebg-preview.png" alt="egg">
+
+    </div>
+    
+<script>
+    const egg = document.getElementById("egg")
+
+    function changePost(){
+        let left = Math.random()*600
+        let top = Math.random()*400
+
+        egg.style.left = left+"px"
+        egg.style.top = top+"px"
+        console.log(left);
+        console.log(top);
+        
+    }
+
+    const post = setInterval(changePost,1000)
+    //fire egg and alert and clearInterval 
+
+
+    
+
+</script>
+</body>
+
+</html>

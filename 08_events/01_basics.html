@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h2>Amazing Image</h2>
+    <div>
+        <ul id="images">
+             <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+
+        </ul>
+    </div>
+
+    <script>
+
+    //1st method for Event listener, but not good at scale.
+    document.getElementById("owl").onclick = function () {
+        alert("owl was clicked")
+    }
+
+    //2nd method for event listener, and best for scale
+    document.getElementById("prayer").addEventListener("click", function (e){ 
+        alert("Prayer was clicked")
+
+        //PROPERTIES IN EVENT :- 
+        console.log(e.timeStamp);  // timeStamp are the property of the event that gives timstamp of the event
+        console.log(e.type);  //it gives the type of event
+        // preventDefault()  - it disables the default behaviour of the event
+       //stopPropagation()
+        //target - 
+        //srcElement - 
+        //currenttarget
+        //clientX,ClientY, screenX, screenY
+        //altkey, ctrlkey, shiftkey, keyCode
+        
+        //bubble event (true and false ) - VVI    
+    })
+
+     document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    })
+
+
+//ends the project
+    </script>
+        
+
+</body>
+</html>

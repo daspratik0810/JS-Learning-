@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request </title>
+</head>
+<body>
+//XMLHttpRequest.readyState  :  Returns a number representing the state of the request.
+
+0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+
+</body>
+
+<script>
+// XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
+
+// Despite its name, XMLHttpRequest can be used to retrieve any type of data, not just XML.
+    
+const xhr = new XMLHttpRequest() 
+const requestURL = "https://api.github.com/users/daspratik0810"
+
+xhr.onreadystatechange = function() {
+    console.log(xhr.readyState);        //this function will execute whenever there is a change in the ready state. AFterwards, the curresponding ready state will be printed in console(refer to the body tag for more info about readystates)  
+
+if(xhr.readyState === 4 ) {   //if the readyState : 4   ,ie,DONE The operation is complete. 
+        
+    let data = this.responseText  //this is the data that we need to GET
+    console.log(data);  //we got the response but unfortunately the data that we requested for is in the form of string and printed in the console, but we need the data in the form of JSON/Object, so that we can retrieve the properties and data later
+
+    console.log(typeof data);  // STRING
+    console.log(data.followers);  //UNDEFINED : As the data we got is a string
+    
+    // hence data is now converted to JSON/Obj, so that we can retreive the properties further
+    data = JSON.parse(this.responseText)  
+    
+    console.log(typeof data); //JSON/Object
+    console.log(data.followers);  // Now we got the correct response and data/properties
+
+}
+ 
+}
+
+xhr.open('GET', requestURL)  //now the request to GET the URL is ready but has not been sent (READYSTATE : 1)
+xhr.send()   //request sent succefully  (READYSTATE : 2)
+
+// VVVI : Learn how JS runs under the hood, very fun and good video 
+// https://youtu.be/pDPAcYdSse8?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=1397
+
+</script>
+
+</html>

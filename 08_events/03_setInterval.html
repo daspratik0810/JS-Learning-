@@ -49,8 +49,10 @@
     const box = document.getElementById("show");
 
     let prevMess = "No Prev Message";
+
     const funct = function (mess) {
       const dt = new Date();
+
       box.innerHTML +=
         "New Message:" +
         mess +
@@ -60,7 +62,7 @@
         "<br>";
       prevMess = mess + dt.toLocaleString();
     };
-
-    setInterval(funct, 100, "");
+ 
+    setInterval(funct, 5000, " ");
   </script>
 </html>

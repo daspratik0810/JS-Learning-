@@ -51,7 +51,7 @@ promiseThree.then(function(user){
 const promiseFour = new Promise(function(resolve, reject){
     setTimeout(function(){
         let error = false
-        if (!error) {       //if no error
+        if (!error) {       //if error = false (no error)
             resolve({username: "Pratik", password: "123"})
         } else {
             reject('ERROR: Something went wrong')
@@ -70,7 +70,7 @@ promiseFour
 .catch(function(error){        //it is connected directly with reject parameter. It triggers when promise rejects/connection rejects.
     console.log(error);
 })
-.finally(() => console.log("The promise is either resolved or rejected"))       //It will always execute, just like default case
+.finally(() => console.log("The promise is either resolved or rejected"))       //It will always execute,in both .then or .catch method...
 
 
 const promiseFive = new Promise(function(resolve, reject){

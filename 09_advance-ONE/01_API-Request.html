@@ -29,7 +29,7 @@ xhr.onreadystatechange = function() {
 
 if(xhr.readyState === 4 ) {   //if the readyState : 4   ,ie,DONE The operation is complete. 
         
-    let data = this.responseText  //this is the data that we need to GET
+    let data = this.responseText  //this is the data that  we need to GET
     console.log(data);  //we got the response but unfortunately the data that we requested for is in the form of string and printed in the console, but we need the data in the form of JSON/Object, so that we can retrieve the properties and data later
 
     console.log(typeof data);  // STRING

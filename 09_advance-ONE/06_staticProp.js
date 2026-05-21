@@ -16,3 +16,4 @@ const hitesh = new User ("hitesh")
 
 hitesh.logMe()
 console.log(hitesh.createID())  // because of static keyword, it failed to take the createMe() function/mentod 
+

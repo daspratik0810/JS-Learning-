@@ -20,7 +20,7 @@ console.log(anotherString);
 const oneMoreString = gameName.slice(-7,3)  //it is same like substring, but can also be given neg number unlike substring, it will start from the end and in reverse 
 console.log(oneMoreString);   // here -7 → length (8)   - 7 = 1 so the range is from 1 to 3.
 
-const newStringOne = "   Pratik   "
+const newStringOne = "   Nitish   "
 console.log(newStringOne);
 console.log(newStringOne.trim());  //it will delete all the whitespaces
 

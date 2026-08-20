@@ -20,16 +20,16 @@ console.log(anotherString);
 const oneMoreString = gameName.slice(-7,3)  //it is same like substring, but can also be given neg number unlike substring, it will start from the end and in reverse 
 console.log(oneMoreString);   // here -7 → length (8)   - 7 = 1 so the range is from 1 to 3.
 
-const newStringOne = "   Nitish   "
+const newStringOne = "   Pratik   "
 console.log(newStringOne);
 console.log(newStringOne.trim());  //it will delete all the whitespaces
 
-const url = "https://pratik.com/webdev"
+const url = "https://pratik.com/webzev"
 
 console.log(url.replace("z", "D"));  //it wont change the original url as it is defined in const and not in let
 console.log(url.includes("webz ev")); 
 
-const gameCharName = "Valorant - omen - Sage - Fade - Phenux"
+const gameCharName = "Valorant - Jett - Sage - Fade - Phenux"
 
 console.log(gameCharName.split("-"));  //it will split entire string based on "-" and put in arrray form.We can also split based on each character by "" and by each whitespace " "
 

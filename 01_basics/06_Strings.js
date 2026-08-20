@@ -24,7 +24,7 @@ const newStringOne = "   Nitish   "
 console.log(newStringOne);
 console.log(newStringOne.trim());  //it will delete all the whitespaces
 
-const url = "https://pratik.com/webzev"
+const url = "https://pratik.com/webdev"
 
 console.log(url.replace("z", "D"));  //it wont change the original url as it is defined in const and not in let
 console.log(url.includes("webz ev")); 

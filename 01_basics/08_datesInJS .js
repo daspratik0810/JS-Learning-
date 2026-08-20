@@ -14,7 +14,7 @@ console.log(myCreatedDate.toDateString());  //gives the output of date created
 let myCreatedDate2 = new Date(2021, 5, 21, 19, 0)  //created a date with time
 console.log(myCreatedDate2.toLocaleString());  //so to preview both date and time
 
-let myCreatedDate3 = new Date("2023-01-14")  //created a date starting "01 - Jan" and "12-Dec"
+let myCreatedDate3 = new Date("2024-01-14")  //created a date starting "01 - Jan" and "12-Dec"
 console.log(myCreatedDate3.toLocaleString());
 
 // little more concepts are there in timestamps ,please do it accordingly

@@ -22,7 +22,7 @@ Languages like Java, C++, and TypeScript are statically typed, and they require 
 const heros = ["naagraj","Shaktimaan","Doga"]
 // Objects :-
 let myObj = {
-    name : "Pratik",
+    name : "Hritik",
     age : 24,
 }
 // Functions :-

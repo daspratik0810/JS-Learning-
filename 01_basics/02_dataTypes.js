@@ -4,7 +4,7 @@
 
 let name = "Pratik"   //string
 let age = 24   // number 
-let isLoggedIn = true  //boolean
+let isLoggedIn = false  //boolean
 
 //number - 2 to power 53
 //bigInt 

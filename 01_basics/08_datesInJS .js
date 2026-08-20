@@ -11,7 +11,7 @@ console.log(typeof myDate);  //obj
 let myCreatedDate = new Date(2021, 5, 21)  //created a date starting with "0 - Jan" to "11-Dec"
 console.log(myCreatedDate.toDateString());  //gives the output of date created
 
-let myCreatedDate2 = new Date(2021, 5, 21, 19, 0)  //created a date with time
+let myCreatedDate2 = new Date(2051, 5, 21, 19, 0)  //created a date with time
 console.log(myCreatedDate2.toLocaleString());  //so to preview both date and time
 
 let myCreatedDate3 = new Date("2024-01-14")  //created a date starting "01 - Jan" and "12-Dec"

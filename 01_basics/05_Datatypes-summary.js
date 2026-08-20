@@ -19,10 +19,10 @@ Languages like Java, C++, and TypeScript are statically typed, and they require 
 */
 
 // Array :-
-const heros = ["nagraj","Shaktimaan","Doga"]
+const heros = ["naagraj","Shaktimaan","Doga"]
 // Objects :-
 let myObj = {
-    name : "Hritik",
+    name : "Pratik",
     age : 24,
 }
 // Functions :-
@@ -45,7 +45,7 @@ console.log(anotherName);      //it will will be hritikdotcom
 //  Heap :-
 
 let userOne = {                    //userOne is an obj, ie non-primitive
-    email: "user1@amazon.com",     // here userOne points to a reference of an obj stored in heap memory
+    email: "user1@google.com",     // here userOne points to a reference of an obj stored in heap memory
     upi: "user@sbi"
 }
 
@@ -53,7 +53,7 @@ let userTwo = userOne              // here userTwo points to a reference of an o
 
 userTwo.email = "user2@google.com"  //any changes made, will be reflected in the original value of the main obj
 
-console.log(userOne.gmail);         //hence new email-value will come here 
+console.log(userOne.email);         //hence new email-value will come here 
 console.log(userTwo.email);         //hence new email-value will come here
 
 

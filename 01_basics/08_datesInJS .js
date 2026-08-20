@@ -8,7 +8,7 @@ console.log(myDate.toLocaleString()); //gives same in another format, date with 
 
 console.log(typeof myDate);  //obj 
 
-let myCreatedDate = new Date(2041, 3, 21)  //created a date starting with "0 - Jan" to "11-Dec"
+let myCreatedDate = new Date(2061, 3, 21)  //created a date starting with "0 - Jan" to "11-Dec"
 console.log(myCreatedDate.toDateString());  //gives the output of date created
 
 let myCreatedDate2 = new Date(2051, 1, 21, 19, 0)  //created a date with time

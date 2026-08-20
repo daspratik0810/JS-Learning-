@@ -29,7 +29,7 @@ const url = "https://pratik.com/webzev"
 console.log(url.replace("z", "D"));  //it wont change the original url as it is defined in const and not in let
 console.log(url.includes("webz ev")); 
 
-const gameCharName = "Valorant - Jett - Sage - Fade - Phenux"
+const gameCharName = "Valorant - omen - Sage - Fade - Phenux"
 
 console.log(gameCharName.split("-"));  //it will split entire string based on "-" and put in arrray form.We can also split based on each character by "" and by each whitespace " "
 

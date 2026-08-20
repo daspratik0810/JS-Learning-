@@ -19,7 +19,7 @@ Languages like Java, C++, and TypeScript are statically typed, and they require 
 */
 
 // Array :-
-const heros = ["naagraj","Shaktimaan","Doga"]
+const heros = ["nagraj","Shaktimaan","Doga"]
 // Objects :-
 let myObj = {
     name : "Hritik",

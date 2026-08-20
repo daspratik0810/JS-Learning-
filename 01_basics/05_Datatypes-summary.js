@@ -45,7 +45,7 @@ console.log(anotherName);      //it will will be hritikdotcom
 //  Heap :-
 
 let userOne = {                    //userOne is an obj, ie non-primitive
-    email: "user1@google.com",     // here userOne points to a reference of an obj stored in heap memory
+    email: "user1@amazon.com",     // here userOne points to a reference of an obj stored in heap memory
     upi: "user@sbi"
 }
 

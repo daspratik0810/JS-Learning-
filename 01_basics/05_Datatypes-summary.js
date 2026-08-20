@@ -53,7 +53,7 @@ let userTwo = userOne              // here userTwo points to a reference of an o
 
 userTwo.email = "user2@google.com"  //any changes made, will be reflected in the original value of the main obj
 
-console.log(userOne.email);         //hence new email-value will come here 
+console.log(userOne.gmail);         //hence new email-value will come here 
 console.log(userTwo.email);         //hence new email-value will come here
 
 
